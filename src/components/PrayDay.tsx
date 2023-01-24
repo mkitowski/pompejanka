@@ -69,9 +69,9 @@ export const PrayDay: FC<{ day: number }> = ({day}) => {
                 <ListItem disablePadding>
                     <Typography variant='h5'>Tajemnice różańca</Typography>
                 </ListItem>
-                <Tajemnice taj={tajemniceRadosne} title={'Tajemnice Radosne'}/>
-                <Tajemnice taj={tajemniceBolesne} title={'Tajemnice Bolesne'}/>
-                <Tajemnice taj={tajemniceChwalebne} title={'Tajemnice Chwalebne'}/>
+                <Tajemnice key='radosne' taj={tajemniceRadosne} title={'Tajemnice Radosne'}/>
+                <Tajemnice key='bolesne' taj={tajemniceBolesne} title={'Tajemnice Bolesne'}/>
+                <Tajemnice key='chwalenbe' taj={tajemniceChwalebne} title={'Tajemnice Chwalebne'}/>
             </List>
         </Box>
 
