@@ -1,5 +1,5 @@
-import React, {FC} from "react";
-import {Box, Divider, List, ListItem, Typography} from "@mui/material";
+import React, {FC, Fragment} from "react";
+import { Divider, List, ListItem, Typography} from "@mui/material";
 import {Colors} from "../const/colors";
 import {tajemniceBolesne, tajemniceChwalebne, tajemniceRadosne} from "../const/tajemnice";
 import {Tajemnice} from "./Tajemnice";
@@ -10,13 +10,10 @@ export const PrayDay: FC<{ day: number }> = ({day}) => {
     const isThanksPart = day > 27;
 
     return (
-        <Box sx={{
-            minWidth: '90%',
-            margin: '10px',
-            borderRadius: '10px'
-        }}>
+        <Fragment>
             <Typography variant='h3' align='center'>Dzień {day}</Typography>
-            <List>
+            <Typography variant='h4' align='center'>{isThanksPart ? 'Część dziekczynna' : 'Część błagalna'}</Typography>
+            <List sx={{width: '100%'}}>
                 <ListItem disablePadding>
                     <Typography variant='h5'>Przed każdym odmówieniem różańca</Typography>
                 </ListItem>
@@ -71,7 +68,6 @@ export const PrayDay: FC<{ day: number }> = ({day}) => {
                 <Tajemnice key='bolesne' taj={tajemniceBolesne} title={'Tajemnice Bolesne'}/>
                 <Tajemnice key='chwalenbe' taj={tajemniceChwalebne} title={'Tajemnice Chwalebne'}/>
             </List>
-        </Box>
-
+        </Fragment>
     )
 }

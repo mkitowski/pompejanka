@@ -3,6 +3,7 @@ import {Box} from "@mui/material";
 import dayjs from "dayjs";
 import {StartScreen} from "./components/StartScreen";
 import {PrayDay} from "./components/PrayDay";
+import {Colors} from "./const/colors";
 
 const today = dayjs().hour(0).minute(0).second(0);
 
@@ -45,7 +46,11 @@ function App() {
             display: 'flex',
             alignItems: 'center',
             flexDirection: 'column',
-            gap: '20px'
+            gap: '20px',
+            backgroundColor: Colors.Background,
+            color: Colors.Font,
+            minHeight: '100vh',
+            top: '0px',
         }}>
             {day ? <PrayDay day={day}/> : <StartScreen startHandler={startHandler} setStartDateHandler={setStartDateHandler}/>}
         </Box>
