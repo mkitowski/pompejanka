@@ -1,5 +1,5 @@
 export enum Colors {
-    Background = '#001021',
-    Font= '#0CAADC',
-    Second = '#1481BA'
+    Background = '#80ADA0',
+    Font= '#33202A',
+    Second = '#80ADA0'
 }

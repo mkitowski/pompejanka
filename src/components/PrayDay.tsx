@@ -11,8 +11,6 @@ export const PrayDay: FC<{ day: number }> = ({day}) => {
 
     return (
         <Box sx={{
-            backgroundColor: Colors.Font,
-            color: Colors.Background,
             minWidth: '90%',
             margin: '10px',
             borderRadius: '5px'
@@ -59,7 +57,7 @@ export const PrayDay: FC<{ day: number }> = ({day}) => {
                     {isThanksPart ? Prayer.Thankfull : Prayer.Begging}
                 </ListItemComponent>
                 <ListItemComponent>
-                    Pod Twoją obronę
+                    <strong>Pod Twoją obronę</strong>
                 </ListItemComponent>
                 <ListItemComponent>
                         3 x

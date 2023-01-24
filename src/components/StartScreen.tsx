@@ -38,7 +38,6 @@ export const StartScreen: FC<StartScreenProps> = (
             {showCalendar ? <Box
                 sx={{
                     padding: '20px',
-                    backgroundColor: Colors.Font,
                     borderRadius: '5px'
                 }}
             >
