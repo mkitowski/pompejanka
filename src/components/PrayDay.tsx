@@ -13,7 +13,7 @@ export const PrayDay: FC<{ day: number }> = ({day}) => {
         <Box sx={{
             minWidth: '90%',
             margin: '10px',
-            borderRadius: '5px'
+            borderRadius: '10px'
         }}>
             <Typography variant='h3' align='center'>Dzień {day}</Typography>
             <List>

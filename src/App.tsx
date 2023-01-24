@@ -1,5 +1,4 @@
 import React, {useCallback, useState} from 'react';
-import './App.css';
 import {Box} from "@mui/material";
 import dayjs from "dayjs";
 import {StartScreen} from "./components/StartScreen";
@@ -31,12 +30,13 @@ function App() {
 
     const startHandler = useCallback(() => {
         setDay(1);
-        document.cookie = `day=${today.format()}`
+        document.cookie = `day=${today.format()};max-age=${54*3600*24}`
     }, []);
 
     const setStartDateHandler = useCallback((e: any) => {
-        setDay(Math.ceil(today.diff(e) / 86400000)+1)
-        document.cookie=`day=${e.hour(0).minute(0).second(0).format()}`;
+        const count = Math.ceil(today.diff(e) / 86400000)+1
+        setDay(count)
+        document.cookie=`day=${e.hour(0).minute(0).second(0).format()};max-age=${(54-count)*3600*24}`;
     }, [])
 
     return (
