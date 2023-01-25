@@ -1,4 +1,4 @@
-import React, {useCallback, useEffect, useState} from 'react';
+import React, {useCallback, useState} from 'react';
 import {Box} from "@mui/material";
 import dayjs from "dayjs";
 import {StartScreen} from "./components/StartScreen";
