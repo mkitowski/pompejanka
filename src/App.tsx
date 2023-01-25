@@ -28,13 +28,13 @@ function App() {
 
     const startHandler = useCallback(() => {
         setDay(1);
-        localStorage.setItem('day-pompejanka', `day=${today.format()}`)
+        localStorage.setItem('day-pompejanka', `${today.format()}`)
     }, []);
 
     const setStartDateHandler = useCallback((e: any) => {
         const count = Math.ceil(today.diff(e) / 86400000)+1
         setDay(count)
-        localStorage.setItem('day-pompejanka',`day=${e.hour(0).minute(0).second(0).format()};max-age=${(54-count)*3600*24}`);
+        localStorage.setItem('day-pompejanka',`${e.hour(0).minute(0).second(0).format()}`);
     }, [])
 
     return (
