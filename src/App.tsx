@@ -1,4 +1,4 @@
-import React, {useCallback, useState} from 'react';
+import React, {useCallback, useEffect, useState} from 'react';
 import {Box} from "@mui/material";
 import dayjs from "dayjs";
 import {StartScreen} from "./components/StartScreen";
@@ -7,7 +7,10 @@ import {Colors} from "./const/colors";
 
 const today = dayjs().hour(0).minute(0).second(0);
 
-
+window.onblur = () => { window.onfocus = () => {
+    // eslint-disable-next-line no-restricted-globals
+    location.reload()
+}}
 function App() {
     const [day, setDay] = useState<number | null>(() => {
         const result = document.cookie.split(';').reduce((a, b) => {
